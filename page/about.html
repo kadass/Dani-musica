@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7291f9c9aa.js" crossorigin="anonymous"></script>
+    <title>Dani Musica | Tentang Kami</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="../src/icon2.png" />
+    <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white top-0 z-50 py-3" id="home">
+        <div class="container mx-auto px-4 py-2 pl-2 flex justify-between items-center">
+          <a href="../index.html/" class="text-xl font-bold">Dani <span class="text-white-600">Musica</span></a>
+            <ul class="hidden sm:flex space-x-4">
+                <li><a href="../index.html" class="hover:text-gray-400">Beranda</a></li>
+                <li><a href="./paket.html" class="hover:text-gray-400">Paket</a></li>
+                <li><a href="./kontak.html" class="hover:text-gray-400">Kontak</a></li>
+                <li><a href="./about.html" class="block hover:text-gray-400">Tentang kami</a></li>
+            </ul>
+            <div class="user rounded-full border-white">
+                <i class="fa-solid fa-user" style="color: #ffffff"></i>
+            </div>
+            <div class="block sm:hidden">
+                <button id="hamburger-btn"
+                    class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 6h14v2H3V6zm0 5h14v2H3v-2zm0 5h14v2H3v-2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="sidebar"
+        class="hidden fixed inset-y-0 right-0 w-64 bg-gray-900 text-white p-6">
+        <button id="close-sidebar-btn"
+            class="absolute top-4 right-4 text-gray-200 hover:text-white">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <ul class="space-y-4">
+            <li><a href="../index.html" class="block hover:text-gray-400">Beranda</a></li>
+            <li><a href="./paket.html" class="block hover:text-gray-400">Paket</a></li>
+            <li><a href="./kontak.html" class="block hover:text-gray-400">Kontak</a></li>
+            <li><a href="./about.html" class="block hover:text-gray-400">Tentang kami</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        hamburgerBtn.addEventListener('click', function () {
+            sidebar.classList.toggle('hidden');
+        });
+
+        closeSidebarBtn.addEventListener('click', function () {
+            sidebar.classList.add('hidden');
+        });
+    </script>
+
+   <!-- Content Section -->
+<section class="py-10 h-max">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2 p-6">
+                <h2 class="text-2xl font-bold mb-4">Harmoni Eklektik yang Menyentuh Jiwa</h2>
+                <p class="text-gray-700">Dani Musica adalah sebuah perwujudan seni yang menggabungkan nuansa musik klasik dengan sentuhan kontemporer yang menarik. Dengan setiap irama, kami menyampaikan cerita yang mengalun lembut dalam ruang kehangatan emosi, mengundang pendengar untuk terhubung dengan sudut-sudut terdalam dari hati mereka. Kami berkomitmen untuk menciptakan pengalaman musikal yang tidak hanya menghibur, tetapi juga merangsang pikiran dan merasuki jiwa.</p>
+                <p class="text-gray-700">Didukung oleh kemahiran dan dedikasi yang tak tertandingi dari para musisi berbakat, kami melampaui batas-batas genre untuk menemukan nada yang mencerahkan dan menyentuh hati setiap individu. Dengan setiap performa, kami mengekspresikan keindahan keberagaman melalui harmoni yang menyelaraskan jiwa. Kami memahami bahwa musik bukan hanya tentang catatan dan melodi, tetapi tentang menceritakan kisah kehidupan dengan intensitas yang tak tergantikan.</p>
+                <p class="text-gray-700">Dani Musica tidak hanya sekadar sebuah grup musik, tetapi merupakan perjalanan emosional yang mengajak Anda untuk merasakan keajaiban yang tersembunyi di antara nada-nada dan chord-chord yang kita mainkan. Bergabunglah dengan kami dalam petualangan melintasi relung jiwa dan rasa, di mana musik bukan hanya diperdengarkan, tetapi dirasakan dengan setiap serat keberadaan kita. Sambutlah setiap keajaiban suara yang kami ciptakan bersama, karena di sanalah kita menemukan keindahan yang tak terungkapkan dari keberadaan manusia.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Table Section -->
+    <section class="py-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-4 text-center">Daftar Pembuat Website</h2>
+            <div class="overflow-x-auto p-4">
+                <table class="w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th
+                                class="px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                                Nama
+                            </th>
+                            <th
+                                class="px-6 py-3 bg-gray-200 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
+                                NPM
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                Sabina Hajar Alviyanti
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                2113030009
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                Garda Zidane Damara
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                2113030020
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                Muhamammad Ainun Naja Fauzi
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                2113030058
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                Reka Ainun Khasanah
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                2113030070
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center py-4">
+        <p>&copy; 2023 Kelompok 5.</p>
+    </footer>
+</body>
+
+</html>

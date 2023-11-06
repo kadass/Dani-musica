@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif; /* Mengubah font menjadi Roboto */
+}
+
+.hero{
+    background-image: url('./src/pp.jpeg');
+    background-repeat: no-repeat;
+    background-position: center top; 
+    height: 200vh;
+    color: #333; /* Mengubah warna teks menjadi abu-abu gelap */
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    transition: transform 0.3s ease;
+}
+
+.card-image:hover img {
+    transform: scale(1.1);
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+}
+
+@keyframes trainAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-train {
+    animation: trainAnimation 10s linear infinite alternate;
+    margin-top: -2px; 
+}

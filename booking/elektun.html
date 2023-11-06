@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Paket Elektun</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css"
+    >
+    <link rel="icon" href="../src/icon2.png" />
+    <link rel="stylesheet" href="../index.css">
+    <style>
+        /* CSS untuk form pemesanan */
+        #booking-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #booking-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #booking-form input[type="text"],
+        #booking-form input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #booking-form input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!--konten halaman-->
+    <div class="center">
+        <h1 class="text-2xl font-bold mb-4">Paket Elektun</h1>
+    </div>
+    <div class="max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="p-4">
+            <!-- Form pemesanan -->
+            <form id="booking-form">
+                <label for="name" class="mb-2">Nama Pemesan:</label>
+                <input type="text" name="name" id="name" required class="border border-gray-300 rounded px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <label for="address" class="mb-2">Alamat Pemesan:</label>
+                <input type="text" name="address" id="address" required class="border border-gray-300 rounded px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <label for="date" class="mb-2">Tanggal Booking:</label>
+                <input type="text" name="date" id="date" required class="border border-gray-300 rounded px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400" readonly>
+                <label for="time-start" class="mb-2">Waktu Mulai:</label>
+                <input type="time" name="time-start" id="time-start" required class="border border-gray-300 rounded px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Pesan</button>
+            </form>
+        </div>
+    </div>
+    <!-- Tambahkan jQuery dan datepicker scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#date').datepicker({
+                format: 'yyyy-mm-dd',
+                autoHide: true,
+            });
+
+            $('#booking-form').submit(function(e) {
+                e.preventDefault();
+                var name = $('#name').val();
+                var address = $('#address').val();
+                var date = $('#date').val();
+                var timeStart = $('#time-start').val();
+
+                if (name === '' || address === '' || date === '' || timeStart === '') {
+                    alert('Nama pemesan, alamat pemesan, tanggal, dan waktu mulai harus diisi.');
+                } else {
+                    // Arahkan ke WhatsApp
+                    var message = "Saya ingin memesan Paket Elektun pada tanggal " + date + " pukul " + timeStart + ". Nama Pemesan: " + name + ". Alamat Pemesan: " + address + ". Apakah saya bisa memesan tanggal tersebut?";
+                    message = encodeURIComponent(message);
+                    var phoneNumber = "081914868016"; // Ganti dengan nomor WhatsApp yang sesuai
+                    var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+                    window.open(whatsappUrl, "_blank");
+
+                    // Reset form
+                    $('#name').val('');
+                    $('#address').val('');
+                    $('#date').val('');
+                    $('#time-start').val('');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

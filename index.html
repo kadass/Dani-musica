@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      src="https://kit.fontawesome.com/7291f9c9aa.js"
+      crossorigin="anonymous"
+    </script>
+    <title>Dani Musica</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" href="./src/icon2.png" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="bg-gray-100">
+<!-- Navbar -->
+<nav class="bg-blue-600 text-white top-0 z-50 py-3" id="home">
+  <div class="container mx-auto px-4 py-2 pl-2 flex justify-between items-center">
+    <a href="#home" class="text-xl font-bold">Dani <span class="text-white-600">Musica</span></a>
+    <ul class="hidden sm:flex space-x-4">
+      <li><a href="#home" class="hover:text-gray-400">Beranda</a></li>
+      <li><a href="./page/paket.html" class="hover:text-gray-400">Paket</a></li>
+      <li><a href="./page/kontak.html" class="hover:text-gray-400">Kontak</a></li>
+      <li><a href="./page/about.html" class="block hover:text-gray-400">Tentang kami</a></li>
+    </ul>
+    <div class="user rounded-full border-white">
+      <i class="fa-solid fa-user" style="color: white"></i>
+    </div>
+    <div class="block sm:hidden">
+      <button id="hamburger-btn" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white">
+        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 6h14v2H3V6zm0 5h14v2H3v-2zm0 5h14v2H3v-2z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="sidebar" class="hidden fixed inset-y-0 right-0 w-64 bg-gray-900 text-white p-6">
+  <button id="close-sidebar-btn" class="absolute top-4 right-4 text-gray-200 hover:text-white">
+    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <ul class="space-y-4">
+    <li><a href="#home" class="block hover:text-gray-400">Beranda</a></li>
+    <li><a href="./page/paket.html" class="block hover:text-gray-400">Paket</a></li>
+    <li><a href="./page/kontak.html" class="block hover:text-gray-400">Kontak</a></li>
+    <li><a href="./page/about.html" class="block hover:text-gray-400">Tentang kami</a></li>
+  </ul>
+</div>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+  const sidebar = document.getElementById('sidebar');
+
+  hamburgerBtn.addEventListener('click', function() {
+    sidebar.classList.toggle('hidden');
+  });
+
+  closeSidebarBtn.addEventListener('click', function() {
+    sidebar.classList.add('hidden');
+  });
+</script>
+    <!-- Hero Section -->
+    <section class="hero bg-cover bg-opacity-50 h-screen flex flex-col justify-center items-center relative">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold text-white shadow-2xl animate__animated animate__fadeInUp animate-train absolute top-1/4 left-1/2 transform -translate-x-1/2" style="margin-top: -140px;">
+        Selamat Datang di website <span class="text-blue-600">DaniMusica</span>
+      </h1>
+    
+  </div>
+</section>
+
+
+    <section class="py-12" id="produk-terbaru">
+      <div class="container mx-auto overflow-x-auto">
+        <h2 class="text-3xl text-center font-bold mb-6">Daftar Personil Dani Musica</h2>
+        <div class="flex flex-wrap justify-center gap-8 max-w-screen-lg mx-auto">
+          <!-- personil 1 -->
+          <div class="bg-white rounded-lg shadow-lg w-72">
+            <img
+              src="./src/img/product/WhatsApp Image 2023-10-10 at 12.03.25.jpeg"
+              alt="Produk 1"
+              class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+    
+          <!-- Personil 2 -->
+          <div class="bg-white rounded-lg shadow-lg w-72">
+            <img
+              src="./src/img/product/p2.jpeg"
+              alt="Produk 2"
+              class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+    
+          <!-- Personil 3 -->
+          <div class="bg-white rounded-lg shadow-lg w-72">
+            <img
+              src="./src/img/product/p3.jpeg"
+              alt="Produk 3"
+              class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Personil 4 -->
+          <div class="bg-white rounded-lg shadow-lg w-72">
+            <img
+              src="./src/img/product/p4.jpeg"
+              alt="Produk 3"
+              class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+
+          <!-- Personil 5 -->
+          <div class="bg-white rounded-lg shadow-lg w-72">
+            <img
+              src="./src/img/product/p5.jpeg"
+              alt="Produk 3"
+              class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center py-4">
+      <p>&copy; 2023 Kelompok 5. </p>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+      // Mendapatkan elemen tombol kembali ke atas
+      var backButton = document.querySelector(".back-to-top");
+
+      // Menampilkan tombol kembali ke atas saat pengguna sudah di bagian bawah halaman
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > window.innerHeight) {
+          backButton.style.display = "block";
+        } else {
+          backButton.style.display = "none";
+        }
+      });
+
+      // Mengatur animasi scroll halus ke bagian atas saat tombol diklik
+      backButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
