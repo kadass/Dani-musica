@@ -9,7 +9,7 @@
     src="https://kit.fontawesome.com/7291f9c9aa.js"
     crossorigin="anonymous"
   ></script>
-  <title>Dani Musica| Paket</title>
+  <title>Dani Musica | Paket</title>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -20,127 +20,132 @@
 
 <body class="bg-gray-100">
   <!-- Navbar -->
-<nav class="bg-blue-600 text-white top-0 z-50 py-3" id="home">
-  <div class="container mx-auto px-4 py-2 pl-2 flex justify-between items-center">
-    <a href="#home" class="text-xl font-bold">Dani <span class="text-white-600">Musica</span></a>
-    <ul class="hidden sm:flex space-x-4">
-      <li><a href="../index.html" class="hover:text-gray-400">Beranda</a></li>
-      <li><a href="#paket" class="hover:text-gray-400">Paket</a></li>
-      <li><a href="./kontak.html" class="hover:text-gray-400">Kontak</a></li>
+  <nav class="bg-blue-600 text-white top-0 z-50 py-3" id="home">
+    <div class="container mx-auto px-4 py-2 pl-2 flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold">Dani <span class="text-white-600">Musica</span></a>
+      <ul class="hidden sm:flex space-x-4">
+        <li><a href="../index.html" class="hover:text-gray-400">Beranda</a></li>
+        <li><a href="#paket" class="hover:text-gray-400">Paket</a></li>
+        <li><a href="./kontak.html" class="hover:text-gray-400">Kontak</a></li>
+        <li><a href="./about.html" class="block hover:text-gray-400">Tentang kami</a></li>
+      </ul>
+      <div class="user rounded-full border-white pr-4">
+        <i class="fa-solid fa-user" style="color: #ffffff"></i>
+      </div>
+      <div class="block sm:hidden">
+        <button id="hamburger-btn" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white">
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 6h14v2H3V6zm0 5h14v2H3v-2zm0 5h14v2H3v-2z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="sidebar" class="hidden fixed inset-y-0 right-0 w-64 bg-gray-900 text-white p-6">
+    <button id="close-sidebar-btn" class="absolute top-4 right-4 text-gray-200 hover:text-white">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <ul class="space-y-4">
+      <li><a href="../index.html" class="block hover:text-gray-400">Beranda</a></li>
+      <li><a href="#paket" class="block hover:text-gray-400">Paket</a></li>
+      <li><a href="./kontak.html" class="block hover:text-gray-400">Kontak</a></li>
       <li><a href="./about.html" class="block hover:text-gray-400">Tentang kami</a></li>
     </ul>
     <div class="user rounded-full border-white pr-4">
       <i class="fa-solid fa-user" style="color: #ffffff"></i>
     </div>
-    <div class="block sm:hidden">
-      <button id="hamburger-btn" class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-200 hover:text-white hover:border-white">
-        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M3 6h14v2H3V6zm0 5h14v2H3v-2zm0 5h14v2H3v-2z" clip-rule="evenodd" />
-        </svg>
-      </button>
-    </div>
   </div>
-</nav>
 
-<div id="sidebar" class="hidden fixed inset-y-0 right-0 w-64 bg-gray-900 text-white p-6">
-  <button id="close-sidebar-btn" class="absolute top-4 right-4 text-gray-200 hover:text-white">
-    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-    </svg>
-  </button>
-  <ul class="space-y-4">
-    <li><a href="../index.html" class="block hover:text-gray-400">Beranda</a></li>
-    <li><a href="#paket" class="block hover:text-gray-400">Paket</a></li>
-    <li><a href="./kontak.html" class="block hover:text-gray-400">Kontak</a></li>
-    <li><a href="./about.html" class="block hover:text-gray-400">Tentang kami</a></li>
-  </ul>
-  <div class="user rounded-full border-white pr-4">
-    <i class="fa-solid fa-user" style="color: #ffffff"></i>
-  </div>
-</div>
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+    const sidebar = document.getElementById('sidebar');
 
-<script>
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-  const sidebar = document.getElementById('sidebar');
+    hamburgerBtn.addEventListener('click', function() {
+      sidebar.classList.toggle('hidden');
+    });
 
-  hamburgerBtn.addEventListener('click', function() {
-    sidebar.classList.toggle('hidden');
-  });
+    closeSidebarBtn.addEventListener('click', function() {
+      sidebar.classList.add('hidden');
+    });
+  </script>
 
-  closeSidebarBtn.addEventListener('click', function() {
-    sidebar.classList.add('hidden');
-  });
-</script>
-
-<section class="py-12">
-  <div class="container mx-auto">
-      <h2 class="text-3xl text-center font-bold mb-6">DAFTAR PAKET DANI MUSIKA</h2>
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl text-center font-bold mb-6">DAFTAR PAKET DANI MUSICA</h2>
       <div class="flex justify-center items-center">
-          <!-- Paket Orkes -->
-          <div class="bg-white rounded-lg shadow-lg text-center p-8 m-4">
-              <img src="../src/img/product/1.jpeg" alt="Orkes" class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300">
-              <div class="mt-4">
-                  <h3 class="text-xl font-bold mb-2">Paket Orkes</h3>
-                  <p class="text-gray-700">Nikmati penampilan orkes yang profesional untuk acara Anda!</p>
-                  <p class="text-gray-700">Paket ini mencakup:</p>
-                  <ul class="list-disc list-inside text-gray-700">
-                      <li>live musik beranggotakan full musisi orkes dangdut</li>
-                      <li>Repertoar musik yang luas dari berbagai genre</li>
-                      <li>Penyesuaian repertoar sesuai keinginan Anda</li>
-                  </ul>
-                  <p class="text-gray-900 font-bold mt-2">Harga: Rp. 4.000.000</p>
-                  <a href="../booking/orchestra.html" class="mt-4 inline-block bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800">klik untuk selengkapnya</a>
-              </div>
+        <!-- Paket Orkes -->
+        <div class="bg-white rounded-lg shadow-lg text-center p-8 m-4">
+          <img src="../src/img/product/1.jpeg" alt="Orkes" class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300">
+          <div class="mt-4">
+            <h3 class="text-xl font-bold mb-2">Paket Orkes</h3>
+            <p class="text-gray-700">Nikmati penampilan orkes yang profesional untuk acara Anda!</p>
+            <p class="text-gray-700">Paket ini mencakup:</p>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Durasi : 3-3,5 jam</li>
+              <li>Estimasi jumlah lagu per jam : 6-8 lagu per jam (Per lagu rata-rata 4-6 menit)</li>
+              <li>Genre lagu : Dangdut,Pop,Campursari,Qosidah</li>
+              <li>Fee per penyanyi dan jumlah penyanyi pada saat acara berlangsung : 300-400 rb per orang.Berjumlahkan 4 penyanyi</li>
+              <li>Bisa untuk event Wedding,Komunitas,Reuni Keluarga,Dies Natalis,dan segala event indoor maupun outdoor.</li>
+            </ul>
+            <p class="text-gray-900 font-bold mt-2">Harga: Rp. 4.000.000</p>
+            <a href="../booking/orchestra.html" class="mt-4 inline-block bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800">Klik untuk pemesanan</a>
           </div>
+        </div>
 
-          <!-- Paket Elektun -->
-          <div class="bg-white rounded-lg shadow-lg text-center p-8 m-4">
-              <img src="../src/img/product/2.jpeg" alt="Elektun" class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300">
-              <div class="mt-4">
-                  <h3 class="text-xl font-bold mb-2">Paket Elektun</h3>
-                  <p class="text-gray-700">Nikmati pengalaman musik elektronik yang mengagumkan untuk acara Anda!</p>
-                  <p class="text-gray-700">Paket ini mencakup:</p>
-                  <ul class="list-disc list-inside text-gray-700">
-                      <li>Atmosfir musik yang energik dan menghibur</li>
-                      <li>Konsultasi khusus untuk merancang playlist sesuai dengan selera Anda</li>
-                      <li>Penyesuaian tata letak panggung sesuai dengan tema acara Anda</li>
-                  </ul>
-                  <p class="text-gray-900 font-bold mt-2">Harga: Rp. 2.500.000</p>
-                  <a href="../booking/elektun.html" class="mt-4 inline-block bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800">Klik untuk selengkapnya</a>
-              </div>
+        <!-- Paket Elektun -->
+        <div class="bg-white rounded-lg shadow-lg text-center p-8 m-4">
+          <img src="../src/img/product/2.jpeg" alt="Elektun" class="w-full h-56 object-cover rounded-t-lg hover:scale-110 transition-transform duration-300">
+          <div class="mt-4">
+            <h3 class="text-xl font-bold mb-2">Paket Elektun</h3>
+            <p class="text-gray-700">Nikmati pengalaman musik elektronik yang mengagumkan untuk acara Anda!</p>
+            <p class="text-gray-700">Paket ini mencakup:</p>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Durasi : 3-3,5 jam</li>
+              <li>Estimasi jumlah lagu per jam : 6-8 lagu per jam (Per lagu rata-rata 4-6 menit)</li>
+              <li>Genre lagu : Dangdut,Pop,Campursari,Qosidah</li>
+              <li>Fee per penyanyi dan jumlah penyanyi pada saat acara berlangsung : 300-400 rb per orang.Berjumlahkan 3 penyanyi</li>
+              <li>Bisa untuk event Wedding,Komunitas,Reuni Keluarga,Dies Natalis,dan segala event indoor maupun outdoor.</li>
+            </ul>
+            <p class="text-gray-900 font-bold mt-2">Harga: Rp. 2.500.000</p>
+            <a href="../booking/elektun.html" class="mt-4 inline-block bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800">Klik untuk pemesanan</a>
           </div>
+        </div>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
- <!-- Footer -->
- <footer class="bg-blue-600 text-white text-center py-4">
-   <p>&copy; 2023 Kelompok 5.</p>
- </footer>
- <!-- JavaScript -->
- <script>
-   // Mendapatkan elemen tombol kembali ke atas
-   var backButton = document.querySelector(".back-to-top");
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4">
+    <p>&copy; 2023 Kelompok 5.</p>
+  </footer>
 
-   // Menampilkan tombol kembali ke atas saat pengguna sudah di bagian bawah halaman
-   window.addEventListener("scroll", function () {
-     if (window.scrollY > window.innerHeight) {
-       backButton.style.display = "block";
-     } else {
-       backButton.style.display = "none";
-     }
-   });
+  <!-- JavaScript -->
+  <script>
+    // Mendapatkan elemen tombol kembali ke atas
+    var backButton = document.querySelector(".back-to-top");
 
-   // Mengatur animasi scroll halus ke bagian atas saat tombol diklik
-   backButton.addEventListener("click", function (e) {
-     e.preventDefault();
-     window.scrollTo({
-       top: 0,
-       behavior: "smooth",
-     });
-   });
- </script>
+    // Menampilkan tombol kembali ke atas saat pengguna sudah di bagian bawah halaman
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > window.innerHeight) {
+        backButton.style.display = "block";
+      } else {
+        backButton.style.display = "none";
+      }
+    });
+
+    // Mengatur animasi scroll halus ke bagian atas saat tombol diklik
+    backButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
 </body>
 
 </html>
